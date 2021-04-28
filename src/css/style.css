@@ -1,0 +1,96 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(34, 31, 31);
+  text-align: center;
+}
+
+
+.stats-item {
+  display: inline-grid;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 2fr));
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  list-style: none;
+}
+
+.btn {
+  font-size: 25px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: rgb(241, 35, 35);
+}
+
+.btn:hover {
+  background-color: rgb(0, 255, 13);
+  color: rgb(0, 0, 0);
+}
+
+.none {
+  display: none;
+}
+
+input {
+ padding: 10px;
+ font-size: 30px;
+ border: 10px solid rgba(255, 255, 255, 0.315);
+ background: rgba(216, 37, 37, 0.5);
+ outline: none;
+ color: rgb(255, 255, 255);
+ width: 50%;
+ position: absolute;
+ left: 25%;
+
+}
+
+.stats > p:not(:last-child) {
+  margin-right: 15px;
+}
+
+.photo-card {
+  border-radius: 10px;
+  max-width: 450px;
+}
+
+.stats{
+  color:rgb(255, 0, 0)
+}
+
+
+.basicLightbox {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0.01;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+  will-change: opacity;
+}
+.basicLightbox--visible {
+  opacity: 1;
+}
+.basicLightbox__placeholder {
+  max-width: 100%;
+  transform: scale(0.9);
+  transition: transform 0.4s ease;
+  z-index: 1;
+  will-change: transform;
+  pointer-events: auto;
+  width: auto;
+  height: auto;
+}
+
+.basicLightbox--visible .basicLightbox__placeholder {
+  transform: scale(1);
+}
